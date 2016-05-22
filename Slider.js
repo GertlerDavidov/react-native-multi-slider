@@ -215,6 +215,7 @@ var Slider = React.createClass({
       height: height,
       width: width,
       left: -width/2,
+      marginTop: -(height/2 + 1),
       borderRadius: borderRadius || 0
     };
 
@@ -222,7 +223,9 @@ var Slider = React.createClass({
       <View style={[styles.container, this.props.containerStyle]}>
         <View style={[styles.fullTrack, {width:sliderLength}]}>
           <View style={[this.props.trackStyle, styles.track, trackOneStyle, {width: trackOneLength}]} />
-          <View style={[this.props.trackStyle, styles.track, trackTwoStyle, {width: trackTwoLength}]}>
+          <View>
+            <View style={[this.props.trackStyle, styles.track, trackTwoStyle, {width: trackTwoLength}]} />
+
             <View
               style={[styles.touch,touchStyle]}
               ref={component => this._markerOne = component}
@@ -236,7 +239,8 @@ var Slider = React.createClass({
             </View>
           </View>
           {twoMarkers && (
-            <View style={[this.props.trackStyle, styles.track, trackThreeStyle, {width: trackThreeLength}]}>
+            <View>
+              <View style={[this.props.trackStyle, styles.track, trackThreeStyle, {width: trackThreeLength}]} />
               {(positionOne !== this.props.sliderLength) && (
                 <View
                   style={[styles.touch,touchStyle]}
