@@ -1,13 +1,12 @@
 'use strict';
 
-var React = require('react-native');
-var {
-  PropTypes,
+import React, {PropTypes} from 'react';
+import {
   StyleSheet,
   PanResponder,
   View,
   TouchableHighlight
-} = React;
+} from 'react-native';
 
 var converter = require('./converter.js');
 var mockProps = require('./mockProps.js');

@@ -1,10 +1,9 @@
 'use strict';
 
-var React = require('react-native');
-var {
-  PropTypes,
+import React, {PropTypes} from 'react';
+import {
   View,
-} = React;
+} from 'react-native';
 
 var BasicMarker = React.createClass({
 
